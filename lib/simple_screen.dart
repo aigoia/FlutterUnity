@@ -3,7 +3,7 @@ import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
 
 class SimpleScreen extends StatefulWidget {
-  const SimpleScreen({Key? key}) : super(key: key);
+  const SimpleScreen({super.key});
 
   @override
   State<SimpleScreen> createState() => _SimpleScreenState();
@@ -11,11 +11,10 @@ class SimpleScreen extends StatefulWidget {
 
 class _SimpleScreenState extends State<SimpleScreen> {
   static final GlobalKey<ScaffoldState> _scaffoldKey =
-      GlobalKey<ScaffoldState>();
+  GlobalKey<ScaffoldState>();
 
   UnityWidgetController? _unityWidgetController;
   double _sliderValue = 0.0;
-
 
   @override
   void initState() {
@@ -38,8 +37,8 @@ class _SimpleScreenState extends State<SimpleScreen> {
       body: Card(
           margin: const EdgeInsets.all(0),
           clipBehavior: Clip.antiAlias,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20.0),
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.zero,
           ),
           child: Stack(
             children: [
@@ -48,7 +47,7 @@ class _SimpleScreenState extends State<SimpleScreen> {
                 onUnityMessage: onUnityMessage,
                 onUnitySceneLoaded: onUnitySceneLoaded,
                 useAndroidViewSurface: false,
-                borderRadius: const BorderRadius.all(Radius.circular(70)),
+                borderRadius: BorderRadius.zero,
               ),
               Positioned(
                 bottom: 0,
@@ -56,6 +55,11 @@ class _SimpleScreenState extends State<SimpleScreen> {
                 right: 0,
                 child: PointerInterceptor(
                   child: Card(
+                    margin: const EdgeInsets.all(0),
+                    clipBehavior: Clip.antiAlias,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero,
+                    ),
                     elevation: 10,
                     child: Column(
                       children: <Widget>[
