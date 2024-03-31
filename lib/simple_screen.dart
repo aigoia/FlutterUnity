@@ -61,24 +61,31 @@ class _SimpleScreenState extends State<SimpleScreen> {
                       borderRadius: BorderRadius.zero,
                     ),
                     elevation: 10,
-                    child: Column(
-                      children: <Widget>[
-                        const Padding(
-                          padding: EdgeInsets.only(top: 20),
-                          child: Text("Rotation speed:"),
-                        ),
-                        Slider(
-                          onChanged: (value) {
-                            setState(() {
-                              _sliderValue = value;
-                            });
-                            setRotationSpeed(value.toString());
-                          },
-                          value: _sliderValue,
-                          min: 0.0,
-                          max: 1.0,
-                        ),
-                      ],
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                      ),
+                      child: Column(
+                        children: <Widget>[
+                          const Padding(
+                            padding: EdgeInsets.only(top: 20),
+                            child: Text("Rotation speed"),
+                          ),
+                          Slider(
+                            onChanged: (value) {
+                              setState(() {
+                                _sliderValue = value;
+                              });
+                              setRotationSpeed(value.toString());
+                            },
+                            value: _sliderValue,
+                            min: 0.0,
+                            max: 1.0,
+                            activeColor: Colors.blue,
+                            inactiveColor: Colors.black12,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
