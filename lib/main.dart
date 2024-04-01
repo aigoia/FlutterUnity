@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Unity in Flutter',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        textTheme: Theme.of(context).textTheme.apply(fontFamily: 'urw'),
+        primarySwatch: Colors.teal,
       ),
       home: const SimpleScreen(),
     );

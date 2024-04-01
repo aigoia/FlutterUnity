@@ -32,7 +32,7 @@ class _SimpleScreenState extends State<SimpleScreen> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: const Text('Simple Screen'),
+        title: const Text('TEST'),
       ),
       body: Card(
           margin: const EdgeInsets.all(0),
@@ -69,7 +69,7 @@ class _SimpleScreenState extends State<SimpleScreen> {
                         children: <Widget>[
                           const Padding(
                             padding: EdgeInsets.only(top: 20),
-                            child: Text("Rotation speed"),
+                            child: Text("SPEED"),
                           ),
                           Slider(
                             onChanged: (value) {
@@ -81,7 +81,7 @@ class _SimpleScreenState extends State<SimpleScreen> {
                             value: _sliderValue,
                             min: 0.0,
                             max: 1.0,
-                            activeColor: Colors.blue,
+                            activeColor: Colors.teal[400],
                             inactiveColor: Colors.black12,
                           ),
                         ],
