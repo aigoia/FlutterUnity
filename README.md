@@ -1,6 +1,6 @@
 # Flutter Unity
 
-A new Flutter project.
+For unity
 
 ## Getting Started
 
