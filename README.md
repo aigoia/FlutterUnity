@@ -1,6 +1,6 @@
-# test
+# Flutter Unity
 
-A new Flutter project.
+A test project for Unity in Flutter.
 
 ## Getting Started
 
